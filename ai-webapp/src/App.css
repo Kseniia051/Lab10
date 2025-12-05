@@ -1,0 +1,150 @@
+/* Общие стили */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+/* Главный контейнер */
+.App {
+  width: 100%;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* центрируем содержимое */
+}
+
+/* Заголовок */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  margin-bottom: 10px;
+}
+
+header button {
+  margin: 0 5px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #eee;
+  transition: background 0.3s;
+}
+
+header button.active {
+  background-color: #4ea3ff;
+  color: white;
+}
+
+/* Форма добавления задач */
+.todo-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center; /* центрируем форму */
+  width: 100%;
+}
+
+.todo-form input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.todo-form select {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.todo-form button {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  background-color: #4ea3ff;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.todo-form button:hover {
+  background-color: #357ace;
+}
+
+/* Список задач */
+.todo-list {
+  width: 100%;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  transition: background 0.3s;
+}
+
+/* Зачёркиваем только текст задачи */
+.todo-item.completed span {
+  text-decoration: line-through;
+  color: #555;
+}
+
+/* Кнопки остаются без зачёркивания */
+.todo-item .buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.complete-btn {
+  background-color: #4ea3ff;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.complete-btn:hover {
+  background-color: #357ace;
+}
+
+.delete-btn {
+  background-color: #ff6b6b;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.delete-btn:hover {
+  background-color: #e63939;
+}
+
+/* Статистика */
+.stats {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: bold;
+}
