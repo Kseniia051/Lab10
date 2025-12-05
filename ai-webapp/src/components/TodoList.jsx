@@ -14,15 +14,14 @@ function TodoList({ todos, setTodos, filter }) {
   });
 
   return (
-  <div className="todo-list">
-    {filteredTodos.length === 0 ? <p>Нет задач</p> :
-      filteredTodos.map(todo => (
-        <TodoItem key={todo.id} todo={todo} todos={todos} setTodos={setTodos} />
-      ))
-    }
-  </div>
-);
-
+    <div className="todo-list">
+      {filteredTodos.length === 0 ? <p>Нет задач</p> :
+        filteredTodos.map(todo => (
+          <TodoItem key={todo.id} todo={todo} todos={todos} setTodos={setTodos} />
+        ))
+      }
+    </div>
+  );
 }
 
 export default TodoList;

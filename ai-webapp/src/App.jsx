@@ -3,19 +3,19 @@ import Header from './components/Header';
 import TodoForm from './components/TodoForm';
 import TodoList from './components/TodoList';
 import Stats from './components/Stats';
+import Photo from './components/Photo';
+import './App.css';
 
 function App() {
-  const [todos, setTodos] = useState([]);       // список задач
-  const [filter, setFilter] = useState('all');  // фильтр: all / today / tomorrow
+  const [todos, setTodos] = useState([]);
+  const [filter, setFilter] = useState('all');
 
   useEffect(() => {
     const saved = localStorage.getItem('todos');
     if (saved) setTodos(JSON.parse(saved));
   }, []);
 
- <TodoList todos={todos} setTodos={setTodos} filter={filter} />
-
-
+  
   useEffect(() => {
     localStorage.setItem('todos', JSON.stringify(todos));
   }, [todos]);
@@ -23,6 +23,7 @@ function App() {
   return (
     <div className="App">
       <Header filter={filter} setFilter={setFilter} />
+      <Photo />
       <TodoForm todos={todos} setTodos={setTodos} />
       <TodoList todos={todos} setTodos={setTodos} filter={filter} />
       <Stats todos={todos} />

@@ -2,11 +2,7 @@ import React from 'react';
 
 function TodoItem({ todo, todos, setTodos }) {
   const toggleComplete = () => {
-    setTodos(
-      todos.map(t =>
-        t.id === todo.id ? { ...t, completed: !t.completed } : t
-      )
-    );
+    setTodos(todos.map(t => t.id === todo.id ? { ...t, completed: !t.completed } : t));
   };
 
   const deleteTodo = () => {

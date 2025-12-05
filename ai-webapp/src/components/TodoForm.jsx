@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 function TodoForm({ todos, setTodos }) {
   const [input, setInput] = useState('');
-  const [day, setDay] = useState('today'); // по умолчанию "сегодня"
+  const [day, setDay] = useState('today');
 
   const addTodo = (e) => {
     e.preventDefault();

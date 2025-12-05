@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Stats({ todos }) {
+const Stats = ({ todos }) => {
   const completed = todos.filter(todo => todo.completed).length;
   const remaining = todos.length - completed;
 
@@ -10,6 +10,6 @@ function Stats({ todos }) {
       <p>Осталось: {remaining}</p>
     </div>
   );
-}
+};
 
 export default Stats;
